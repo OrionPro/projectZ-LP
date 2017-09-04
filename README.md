@@ -1,12 +1,4 @@
-# **Шаблон на webpack - sass/pug/sprite/react**
+# **Лендинг Zergo**
 
 ***
-Установка:
-
-npm i
-***
-Запуск:
-
-npm start		(для dev)
-
-npm build		(для prod)
+На базе шаблона webpack

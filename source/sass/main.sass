@@ -20,6 +20,30 @@ html, body
 	&.slidebars
 		width: 100%
 		overflow: hidden !important
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
 body
 	margin: 0
 	min-width: 320px
@@ -45,7 +69,9 @@ body
 //-moz-osx-font-smoothing: grayscale
 
 h1
-	@include font($main_color, 28, $font_main_regular, 1.2)
+	@include font($main_txt_color, 37, $font_HelveticaNeueCyr_Roman, 1.2)
+	span
+		@include font($main_color, 60, $font_HelveticaNeueCyr_Heavy, 1.2)
 p,ul
 	padding: 0
 	margin: 0
@@ -283,105 +309,7 @@ li
 #form-file
 	.file_wrap
 		margin-bottom: 20px
-// Header
-.header
-	width: 100%
-	padding-top: 30px
-	padding-bottom: 30px
-	background-color: transparent
-	position: absolute
-	z-index: 10
-	.row
-		align-items: center
-.header__logo
-	display: inline-block
-	margin-left: 15px
-	a
-		color: #fff
-		@include fz(34)
-		font-family: $font_main_regular
-		&:hover
-			text-decoration: none
-.header__nav
-	display: inline-block
-	position: relative
-	margin-left: auto
-	margin-right: auto
-	ul
-		li
-			list-style: none
-			display: inline-block
-			a
-				margin-right: 15px
-				color: #fff
-				@include fz(16)
-				text-decoration: none
-				transition: .5s
-.header__modal
-	display: inline-block
-	&.last
-		a
-			&:after
-				@include css-triangle(#fff,up,10px)
-				top: calc(50% - 5px)
-				right: -20px
-				transition: 0.5s
-			&:hover:after
-				transform: rotate(180deg)
-	a
-		margin-left: 15px
-		padding: 10px 15px
-		@include font(#fff, 17, $font_main_regular)
-		border: 2px solid #FFF
-		border-radius: 10px
-		text-decoration: none
-		transition: .5s
-		position: relative
-		&:hover
-			border: 2px solid transparent
-			background-color: #ff9600
-			color: #fff
-// Секция top-section
-.top-section
-	text-align: center
-	min-height: 600px
-	height: 100vh
-	background: url(../img/header_bg.jpg) no-repeat
-	background-size: cover
-	.container
-		height: 100%
-		min-height: 100%
-		.row
-			height: 100%
-			min-height: 100%
-			flex-direction: column
-			align-items: center
-.top-section__title
-	margin-top: 115px
-	flex: 1 auto
-	display: flex
-	flex-direction: column
-	align-items: center
-	justify-content: flex-end
-	p
-		@include fz(30)
-		color: #fff
 
-.top-section__bot-txt
-	margin-top: 50px
-	flex: 1 0 auto
-	p
-		@include fz(25)
-		color: #fff
-	.is-sticky
-		p
-			margin: auto
-			left: 0
-			right: 0
-			z-index: 1000 !important
-			background: #000
-.top-section__circle
-	flex: 0 0 auto
 // Бутерброд
 .no-touch #nav-button-label
 	&:hover .nav-line
@@ -463,29 +391,6 @@ label
 		-o-transition: .5s
 		transition: .5s
 		top: 14px
-
-body input:focus:required:invalid,
-body textarea:focus:required:invalid
-	color: #666
-body input:required:valid,
-body textarea:required:valid
-	color: #666
-
-*::-webkit-input-placeholder
-	color: #666
-	opacity: 1
-
-*:-moz-placeholder
-	color: #666
-	opacity: 1
-
-*::-moz-placeholder
-	color: #666
-	opacity: 1
-
-*:-ms-input-placeholder
-	color: #666
-	opacity: 1
 
 // внешний вид табов и анимация
 .tabs-items-wrap
@@ -572,11 +477,79 @@ nav[canvas]
 			padding: 0
 			display: block
 			list-style: none
+
+// Header
+.header
+	width: 100%
+	background-color: #fff
+	z-index: 10
+	.row
+		align-items: center
+.header__logo
+	display: inline-block
+	margin-left: 15px
+	a
+		text-decoration: none
+		&:hover
+			text-decoration: none
+.header__nav
+	display: inline-block
+	position: relative
+	margin-left: auto
+	ul
+		li
+			list-style: none
+			display: inline-block
+			a
+				margin-right: 15px
+				color: $main_txt_color
+				@include fz(16)
+				font-family: $font_HelveticaNeueCyr_Roman
+				text-decoration: none
+				transition: .5s
+// Секция top-section
+.top-section
+	text-align: left
+	min-height: 600px
+	height: 100vh
+	background: #fff url(../img/header_bg.jpg) center top no-repeat
+	.container
+		height: 100%
+		min-height: 100%
+		.row
+			height: 100%
+			min-height: 100%
+			flex-direction: column
+			align-items: left
+.top-section__title
+	flex: 1 auto
+	display: flex
+	flex-direction: column
+	align-items: left
+	p
+		@include fz(22)
+		color: $main_txt_color
+
+.top-section__bot-txt
+	margin-top: 50px
+	flex: 1 0 auto
+	p
+		@include fz(25)
+		color: #fff
+	.is-sticky
+		p
+			margin: auto
+			left: 0
+			right: 0
+			z-index: 1000 !important
+			background: #000
+.top-section__circle
+	flex: 0 0 auto
 // Секция our_advantages
 .our_advantages
-	min-height: 630px
-	background-color: #fff
-	padding-top: 75px
+	background: #fff url(../img/our_advantages_bg.jpg) center top no-repeat
+	padding-top: 60px
+	padding-bottom: 80px
 	.title
 		margin-bottom: 10px
 		text-align: center

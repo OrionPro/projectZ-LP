@@ -33,8 +33,6 @@ html(class="no-js" lang="ru")
 				top: 50%;
 				position: absolute
 			}
-	// Весь внутренний контент страницы
-	// второй класс у body это анимация на модалке (animated-transition-effects гуглануть или спросить меня, убрав класс вернётся обычная анимация модалки, без изысков)
 	body
 		div
 			.loader
@@ -42,7 +40,7 @@ html(class="no-js" lang="ru")
 					include ../img/preloader.svg
 		block modal
 			include modal
-		// Элемент cd-transition-layer это тоже для прикольной анимации модалки
+		// Элемент cd-transition-layer - анимация модалки
 		.cd-transition-layer
 			.bg-layer
 		nav(canvas="" class="")
@@ -60,20 +58,15 @@ html(class="no-js" lang="ru")
 					.container
 						.row
 							.header__logo
-								a(href="/" class="logo" title="Логотип").
-									Ваш Логотип
+								a(href="/" class="logo" title="Логотип")
+									include ../img/logo.svg
 							nav.header__nav
 								ul
 									-var links = [{title:'Blog', href:'blog.html'},{title:'Преимущества', href:'#'},{title:'Отзывы', href:'#'},{title:'7 3842 59 61 68', href:'tel:73842596168'}];
 									each i in links
 										li
 											a(href=i.href)= i.title
-							.header__modal
-								a(data-effect="mfp-zoom-in" data-info="Обратный звонок" href="#popup" class="open-popup-link" title='Вызов стандартного модального окна') Обратный звонок
-							.header__modal.last
-								a(data-effect="mfp-zoom-in" data-info="Обратный звонок" href="#popup3" class="open-popup-link active" title='Вызов примера модального окна, в виде навигации.') Мобильное меню
 
-			// В блок main пишем весь контент (по умолчанию всё, что мы положим в block main в index.pug будет затираться - смотрим доки по pug, этот комментарий на продакшен стереть )
 			block main
 			block footer
 				// Секция footer
