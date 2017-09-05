@@ -12,7 +12,7 @@
 
 $main_color: #fb0018
 $auxiliary_txt_color: #443133
-$main_txt_color: #151515
+$main_txt_color: #1c1c1c
 $main_bg_color: #fff
 
 
@@ -74,27 +74,31 @@ $font_HelveticaNeueCyr_Medium: "HelveticaNeueCyr-Medium",-apple-system,system-ui
 	text-overflow: ellipsis
 .main_btn
 	min-width: 272px
-	height: 49px
-	line-height: 49px
+	height: 40px
+	display: none
+	line-height: 40px
 	padding: 0 5px
 	border: 1px solid transparent
 	background-color: $main_color
-	text-transform: normal
-	border-radius: 5px
+	text-transform: none
+	box-shadow: -6.4px 7.7px 9px 1px rgba(133, 133, 133, 0.5)
 	@include font(#fff, 16, $font_main_regular)
 	transition: 0.5s
 	&:hover
 		background-color: #fff
-		border: 1px solid $main_color
+		border: 1px solid #d7011e
 		color: $main_color
+		box-shadow: 0px 0px 0px 0px rgba(133, 133, 133, 0.5)
 	&:active
 		background-color: #fff
-		border: 1px solid $main_color
+		border: 1px solid #d7011e
 		color: $main_color
+		box-shadow: 0px 0px 0px 0px rgba(133, 133, 133, 0.5)
 	&:focus
 		background-color: #fff
-		border: 1px solid $main_color
+		border: 1px solid #d7011e
 		color: $main_color
+		box-shadow: 0px 0px 0px 0px rgba(133, 133, 133, 0.5)
 		outline: 0
 
 .center

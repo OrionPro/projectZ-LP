@@ -8,7 +8,6 @@
 @import "../libs/font-awesome.min.css"
 @import "../libs/anim-modal.css"
 @import "../libs/slidebars.min.css"
-@import "../libs/select2.min.css"
 
 html
 	&.modal
@@ -70,8 +69,10 @@ body
 
 h1
 	@include font($main_txt_color, 37, $font_HelveticaNeueCyr_Roman, 1.2)
-	span
+	&:first-line
 		@include font($main_color, 60, $font_HelveticaNeueCyr_Heavy, 1.2)
+h2
+	@include font($main_txt_color, 37, $font_HelveticaNeueCyr_Roman, 1.2)
 p,ul
 	padding: 0
 	margin: 0
@@ -223,7 +224,7 @@ li
 			top: 50px
 			left: 0
 			right: 0
-			z-index: 10
+			z-index: 12
 			li
 				list-style: none
 				border-bottom: none
@@ -263,6 +264,7 @@ li
 			position: absolute
 			top: 5px
 			right: 10px
+			cursor: pointer
 			.fa
 				@include fz(24)
 				color: #000
@@ -483,11 +485,13 @@ nav[canvas]
 	width: 100%
 	background-color: #fff
 	z-index: 10
+	position: relative
 	.row
 		align-items: center
 .header__logo
 	display: inline-block
 	margin-left: 15px
+	margin-top: 5px
 	a
 		text-decoration: none
 		&:hover
@@ -500,18 +504,23 @@ nav[canvas]
 		li
 			list-style: none
 			display: inline-block
-			a
+			text-align: right
+			margin-right: 65px
+			&:last-of-type
 				margin-right: 15px
+			a
 				color: $main_txt_color
-				@include fz(16)
+				@include fz(18)
 				font-family: $font_HelveticaNeueCyr_Roman
 				text-decoration: none
 				transition: .5s
+				&:hover
+					color: $main_color
 // Секция top-section
 .top-section
 	text-align: left
 	min-height: 600px
-	height: 100vh
+	padding-bottom: 150px
 	background: #fff url(../img/header_bg.jpg) center top no-repeat
 	.container
 		height: 100%
@@ -522,29 +531,16 @@ nav[canvas]
 			flex-direction: column
 			align-items: left
 .top-section__title
-	flex: 1 auto
 	display: flex
 	flex-direction: column
+	margin-top: 110px
 	align-items: left
 	p
 		@include fz(22)
 		color: $main_txt_color
-
-.top-section__bot-txt
-	margin-top: 50px
-	flex: 1 0 auto
-	p
-		@include fz(25)
-		color: #fff
-	.is-sticky
-		p
-			margin: auto
-			left: 0
-			right: 0
-			z-index: 1000 !important
-			background: #000
-.top-section__circle
-	flex: 0 0 auto
+		margin-bottom: 100px
+	h1
+		margin-bottom: 40px
 // Секция our_advantages
 .our_advantages
 	background: #fff url(../img/our_advantages_bg.jpg) center top no-repeat
@@ -554,9 +550,13 @@ nav[canvas]
 		margin-bottom: 10px
 		text-align: center
 		h2
-			color: #626262
 			text-align: center
-			font-size: 35px
+			color: #fefefe
+			margin-bottom: 20px
+		p
+			color: #fefefe
+			@include fz(22)
+			line-height: 1.1
 	.our_advantages_item
 		margin-bottom: 30px
 		min-height: 230px
@@ -654,9 +654,6 @@ label.check, label.radio
 
 // Секия footer 
 .footer
-	background-color: #333
-	height: 200px
-	flex: 0 0 auto
 
 
 

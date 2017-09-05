@@ -5,26 +5,31 @@ block main
 	section.top-section
 		.container
 			.row
-				.top-section__title
-					h1
-						span ЗАРАБОТАЙ
-						br
-						|  на любимой онлайн игре!
-					p Сними видео по прохождению или напиши гайд, размести на нашем сайт и получи деньги.
-					button.main_btn Разместить публикацию
+				.top-section__title.col-lg-6
+					.anim
+						h1
+							| ЗАРАБОТАЙ
+							br
+							|  на любимой онлайн игре!
+					.anim
+						p Сними видео по прохождению или напиши гайд, размести на нашем сайт и получи деньги.
+					.anim
+						button.main_btn Разместить публикацию
 
-				.top-section__circle
-					include ../../img/svg_circle.svg
 	// Секция  our_advantages
 	section#our_advantages.our_advantages
 		.container
 			.title
-				h2 Наши преимущества
-				img(src=require("../../img/garant.svg"))
+				h2 Нам нужны интересные и полезные материалы
+					br
+					|	популярных онлайн игр.
+				p Кто, если не геймеры лучше всего знают онлайн игры изнутри,
+					br
+					| владеют секретами по прохождению, используют «авторские фишки».
 			.row
 				.our_advantages_item.col-lg-4.col-md-6
 					.our_advantages_item_img
-						i.fa.fa-users
+						img(src=require("../../img/our_advantages-video-player.png"))
 					h3 Заголовок
 					p Индивидуальный подход к каждому клиенту
 				.our_advantages_item.col-lg-4.col-md-6
@@ -37,25 +42,6 @@ block main
 						i.fa.fa-list-ol
 					h3 Заголовок
 					p Многообразие материалов и стилевых решений
-				.our_advantages_item.col-lg-4.col-md-6
-					.our_advantages_item_img
-						i.fa.fa-pencil
-					h3 Заголовок
-					p Для вас бесплатно: замер, дизайн-проект, доставка и монтаж
-				.our_advantages_item.col-lg-4.col-md-6
-					.our_advantages_item_img
-						i.fa.fa-credit-card-alt
-					h3 Заголовок
-					p Возможность оформления мебели в кредит
-				.our_advantages_item.col-lg-4.col-md-6
-					.our_advantages_item_img
-						i.fa.fa-wrench
-					h3 Заголовок
-					p Изготовление мебели только из высококачественных материалов
-	// Тест react
-	section.react
-		.container
-			#app
 	// Секция main_content
 	section.main_content
 		.container
@@ -81,23 +67,6 @@ block main
 				i.fa.fa-1.fa-square-o
 				i.fa.fa-2.fa-check-square-o
 				span второй чек
-			h3 Пример Select на плагине Select2
-				h4 с тегами
-				.select2-container
-					select.select2-tags.form-control(multiple)
-						option angular
-						option react
-						option vui
-						option(disabled) ember
-						option backbone
-				h4 обычный
-				.select2-container
-					select.select2
-						option angular
-						option react
-						option vui
-						option(disabled) ember
-						option backbone
 	// Секция  ask-form-title
 	section.intermediate
 		.container

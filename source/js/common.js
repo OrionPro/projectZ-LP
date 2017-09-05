@@ -7,7 +7,6 @@ require("../libs/libs").magnific_popup();
 require("../libs/libs").tooltipster_follower();
 require("../libs/libs").tooltipster();
 require("../libs/libs").jqueryValidation();
-require("../libs/libs").select2();
 require("../libs/libs").input_mask();
 require("../libs/libs").sticky();
 import validation from '../js/validation';
@@ -36,6 +35,8 @@ function tabs(obj) {
 }
 
 $(document).ready(function () {
+
+	$('.main_btn').show();
 	// вызов tabs
 	tabs({
 		btn:'.tabs-items-wrap > .tabs-item',
