@@ -17,9 +17,9 @@ block main
 						button.main_btn Разместить публикацию
 
 	// Секция  our_advantages
-	section#our_advantages.our_advantages
+	section#our_advantages.our-advantages
 		.container
-			.title
+			.our-advantages__title
 				h2 Нам нужны интересные и полезные материалы
 					br
 					|	популярных онлайн игр.
@@ -27,46 +27,68 @@ block main
 					br
 					| владеют секретами по прохождению, используют «авторские фишки».
 			.row
-				.our_advantages_item.col-lg-4.col-md-6
-					.our_advantages_item_img
-						img(src=require("../../img/our_advantages-video-player.png"))
-					h3 Заголовок
-					p Индивидуальный подход к каждому клиенту
-				.our_advantages_item.col-lg-4.col-md-6
-					.our_advantages_item_img
-						i.fa.fa-diamond
-					h3 Заголовок
-					p Неповторимость и практичность каждого проекта мебели
-				.our_advantages_item.col-lg-4.col-md-6
-					.our_advantages_item_img
-						i.fa.fa-list-ol
-					h3 Заголовок
-					p Многообразие материалов и стилевых решений
-	// Секция main_content
-	section.main_content
+				.col-lg-3.col-md-6
+					.our-advantages__item
+						.our-advantages__img
+							img(src=require("../../img/our_advantages-video-player.png"))
+							span 1
+						h3 Видеообзоры
+				.col-lg-3.col-md-6
+					.our-advantages__item
+						.our-advantages__img
+							img(src=require("../../img/our_advantages-printed.png"))
+							span 2
+						h3 Пресс релизы
+				.col-lg-3.col-md-6
+					.our-advantages__item
+						.our-advantages__img
+							img(src=require("../../img/our_advantages-img3.png"))
+							span 3
+						h3 Информационные статьи
+				.col-lg-3.col-md-6
+					.our-advantages__item
+						.our-advantages__img
+							img(src=require("../../img/our_advantages-img4.png"))
+							span 4
+						h3 Гайды
+	// Секция how-it-works
+	section.how-it-works
 		.container
-			div Пример checkbox
-			label.check.noselect
-				input(type='checkbox')
-				i.fa.fa-1.fa-square-o
-				i.fa.fa-2.fa-check-square-o
-				span первый чек
-			label.check.noselect
-				input(type='checkbox')
-				i.fa.fa-1.fa-square-o
-				i.fa.fa-2.fa-check-square-o
-				span второй чек
-			div Пример radio button
-			label.radio.noselect
-				input(type='radio', name='radio')
-				i.fa.fa-1.fa-square-o
-				i.fa.fa-2.fa-check-square-o
-				span первый чек
-			label.radio.noselect
-				input(type='radio', name='radio', checked='')
-				i.fa.fa-1.fa-square-o
-				i.fa.fa-2.fa-check-square-o
-				span второй чек
+			.how-it-works__title
+				h2 Как это действует:
+			.row
+				.offset-xl-5.offset-lg-4.col-xl-7.col-lg-8
+					.row
+						.how-it-works__item.col-xl-5.col-lg-5.col-12
+							p
+								span 01
+								| Вы записываете видеообзор или текст статьи
+							img.arrow(src=require("../../img/how-it-works__arrow.png"))
+						.how-it-works__item.offset-xl-2.offset-lg-2.col-xl-5.col-lg-5
+							p
+								span 02
+								| Вы размещаете
+								| материал через
+								| специальную форму
+							img.arrow2(src=require("../../img/how-it-works__arrow.png"))
+						.how-it-works__item.offset-xl-2.offset-lg-3.col-xl-7.col-lg-5.flex-center
+							p
+								span 03
+								| Ваша публикация
+								| проходит модерацию
+							img.arrow3(src=require("../../img/how-it-works__arrow.png"))
+						.how-it-works__item.col-xl-5.col-lg-5
+							p
+								span 04
+								| Если все в порядке,
+								| Вашу публикацию
+								| размещают на сайте
+						.how-it-works__item.offset-xl-2.offset-lg-2.col-xl-5.col-lg-5
+							p
+								span 05
+								| Вам перечисляют
+								| оплату за работу
+							img.arrow4(src=require("../../img/how-it-works__arrow.png"))
 	// Секция  ask-form-title
 	section.intermediate
 		.container

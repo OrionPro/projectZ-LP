@@ -542,12 +542,12 @@ nav[canvas]
 	h1
 		margin-bottom: 40px
 // Секция our_advantages
-.our_advantages
-	background: #fff url(../img/our_advantages_bg.jpg) center top no-repeat
+.our-advantages
+	background: #181818 url(../img/our_advantages_bg.jpg) center top no-repeat
 	padding-top: 60px
 	padding-bottom: 80px
-	.title
-		margin-bottom: 10px
+	.our-advantages__title
+		margin-bottom: 55px
 		text-align: center
 		h2
 			text-align: center
@@ -557,27 +557,65 @@ nav[canvas]
 			color: #fefefe
 			@include fz(22)
 			line-height: 1.1
-	.our_advantages_item
+	.our-advantages__item
 		margin-bottom: 30px
-		min-height: 230px
+		padding-top: 35px
+		display: flex
+		flex-direction: column
+		align-items: center
 		h3
-			font-size: 26px
+			@include font($main_bg_color, 22, $font_HelveticaNeueCyr_Light, 1.2)
 			text-align: center
-		p
-			margin-top: 15px
-			@include fz(16)
-			line-height: 1.2
-			text-align: center
-		.our_advantages_item_img
-			text-align: center
-			i
-				@include fz(72)
-				color: #00b6f4
-// Секция main_content
-.main_content
+		span
+			position: absolute
+			top: -40px
+			left: -28px
+			@include font($main_color, 100, $font_HelveticaNeueCyr_Heavy, 0.8)
+			z-index: -1
+		.our-advantages__img
+			position: relative
+			display: inline-flex
+			margin-bottom: 40px
+			z-index: 1
+
+// Секция how-it-works
+.how-it-works
+	padding-top: 55px
+	background: #fff url(../img/how-it-works__bg.png) center top no-repeat
+.how-it-works__title
 	text-align: center
-	.select2-container
-		width: 300px
+	margin-bottom: 100px
+.how-it-works__item
+	margin-bottom: 80px
+	position: relative
+	p
+		width: 240px
+		@include fz(22)
+		line-height: 1.2
+		span
+			margin-right: 5px
+			@include font($main_color, 22, $font_HelveticaNeueCyr_Heavy, 0.8)
+	&.flex-center
+		margin-bottom: 100px
+	.arrow
+		position: absolute
+		top: -40px
+		right: -100px
+	.arrow2
+		position: absolute
+		bottom: -135px
+		right: 110px
+		transform: rotate(150deg) scale(1)
+	.arrow3
+		position: absolute
+		bottom: -45px
+		left: -70px
+		transform: rotate(-45deg) scaleX(-1) scale(1)
+	.arrow4
+		position: absolute
+		bottom: -27px
+		left: -150px
+		transform: rotate(-180deg) scaleX(-1) scale(1)
 // Пример checkbox
 label.check, label.radio
 	display: inline-flex
