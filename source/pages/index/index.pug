@@ -89,49 +89,93 @@ block main
 								| Вам перечисляют
 								| оплату за работу
 							img.arrow4(src=require("../../img/how-it-works__arrow.png"))
-	// Секция  ask-form-title
-	section.intermediate
+	// Секция material requirements
+	section.material-requirements
 		.container
-			.intermediate_title
-				h3 Заполните форму и мы бесплатно перезвоним и ответим на ваши вопросы
-			.intermediate_wrap
-				form#form-file.clearfix
-					.file_wrap
-						input(type='file' name='field')
-					.row
-						.intermediate_item.col-lg-3.col-md-4.col-sm-4
-							.input_wrap
-								i.fa.fa-check
-								input(name='name', type='text', placeholder='Имя')
-						.intermediate_item.col-lg-3.col-md-4.col-sm-4
-							.input_wrap
-								i.fa.fa-check
-								input(name='email', type='text', placeholder='Почта')
-						.intermediate_item.col-lg-3.col-md-4.col-sm-4
-							.input_wrap
-								i.fa.fa-check
-								input(name='phone', type='text', placeholder='Телефон')
-						input(type='hidden', name='form_name', value='')
-						input(type='hidden', name='form_type', value='normal')
-						.intermediate_item.col-lg-3
-							input(type='submit', value='Записаться')
-			h3 Пример табов с вложенностью ещё одного таба
-			.tabs-items-wrap
-				button.main_btn.tabs-item.active Мужские размеры
-				button.main_btn.tabs-item Женские размеры
-			.tabs-wrap.active
-				p.
-					Lorem ipsum dolor sit amet, an eam simul albucius. An ius duis aeque suscipit, ius ullum suscipit eu. Detracto ponderum pertinacia ei his, nonumy omnium adipisci nec ei, ea ludus dictas fuisset qui.
-			.tabs-wrap
-				p.
-					Persius volumus est cu! Ad populo erroribus sed. Timeam legimus maiorum usu te, civibus detracto at vel. Accusata lobortis in sed, et tempor saperet qui. Eu timeam salutandi quaerendum his.
-				h4 Вложенный таб
-				.tabs-items-wrap-inner
-					button.main_btn.tabs-item.active Мужские размеры 2
-					button.main_btn.tabs-item Женские размеры 2
-					.tabs-wrap-inner.active
-						p Detracto ponderum pertinacia ei his, nonumy omnium adipisci nec ei, ea ludus dictas fuisset qui.
-					.tabs-wrap-inner
-						p Accusata lobortis in sed, et tempor saperet qui. Eu timeam salutandi quaerendum his.
+			.material-requirements__title
+				h2 Требования к размещаемым материалам:
+			.row.material-requirements__wrap-item
+				.col-xl-4.wrap.col-9.col-sm-7.col-md-6.col-lg-5
+					.material-requirements__item
+						img(src=require("../../img/material-requirements-img-mini.png"))
+						h3
+							| Грамотный, правильно
+							|структурированный текст.
+						p
+							| Без орфографических и граммати-
+							| ческих ошибок, содержащий списки
+							| и подзаголовки.
+				.col-xl-4.wrap.col-9.col-sm-7.col-md-6.col-lg-5
+					.material-requirements__item
+						img(src=require("../../img/material-requirements-img-mini2.png"))
+						h3
+							| Публикация должна быть
+							| полезна (интересна) пользо-
+							| вателям.
+						p
+							| Это может быть гайд, советы, секреты,
+							| рекомендации и т.д..
+				.col-xl-4.wrap.col-9.col-sm-7.col-md-6.col-lg-5
+					.material-requirements__item
+						img(src=require("../../img/material-requirements-img-mini3.png"))
+						h3
+							| Допускается только
+							br
+							| авторский материал.
+						p
+							| Материал должен пренадлежать лично
+							| Вам, и ранее нигде не опубликованный.
+				.col-xl-6.wrap.col-9.col-sm-7.col-md-6.col-lg-5
+					.material-requirements__item.bot
+						img(src=require("../../img/material-requirements-img-mini4.png"))
+						h3
+							| Видео должно быть хорошего качества.
+						p
+							| Большое разрешение видео, или при надобности,
+							| обработанное в видео редакторе.
+				.col-xl-6.wrap.col-9.col-sm-7.col-md-6.col-lg-5
+					.material-requirements__item.bot
+						img(src=require("../../img/material-requirements-img-mini5.png"))
+						h3
+							| Желательно подкреплять статьи
+							br
+							| соответствующими скриншотами из игры.
+						p
+							| Прикрепляйте изображения, подходящие по смыслу и в
+							| хорошем качестве.
+	// Секция post-your-publication
+	section.post-your-publication
+		.container
+			.post-your-publication__title
+				h2 Разместить свою публикацию очень просто:
+			.post-your-publication__carousel
+				.owl-carousel.owl-theme
+					.item
+						img.img-fluid(src=require("../../img/post-your-publication__carousel_img.jpg"))
+						p Слайдер 1
+					.item
+						img.img-fluid(src=require("../../img/post-your-publication__carousel_img.jpg"))
+						p Слайдер 2
+				.customPrevBtn
+					img(src=require("../../img/slider-arrow.png"))
+				.customNextBtn
+					img(src=require("../../img/slider-arrow.png"))
+	// Секция get-more
+	section.get-more
+		.container
+			.get-more__title
+				h2.big ХОТИТЕ ПОЛУЧАТЬ БОЛЬШЕ?
+				.col-xl-11.col-12.offset-lg-1
+					p
+						| В своих статьях вы можете размещать
+						br
+						| личные партнерские ссылки и получать дополнительно
+						| 30% от дохода площадки Zergo.
+					p
+						| Здесь можно узнать больше об условиях
+						a(href="#")  партнерской программы.
+				h2.big2 Хотите поделиться своими знаниями с другими и заработать на этом?
+				button.main_btn Разместить публикацию
+
 
 

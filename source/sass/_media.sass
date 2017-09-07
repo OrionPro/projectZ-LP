@@ -12,6 +12,12 @@
 			i
 				color: #000000
 // Large devices (desktops, less than 1200px)
+@media only screen and (max-width : 1300px)
+	.post-your-publication__carousel
+		.customPrevBtn
+			left: 0
+		.customNextBtn
+			right: 0
 @media only screen and (max-width : 1199px)
 	/**/
 	// для фиксированного сайта
@@ -41,6 +47,28 @@
 			bottom: -7px
 			left: -134px
 			transform: rotate(-180deg) scaleX(-1) scale(0.8)
+	.material-requirements
+		background: #212121
+		.material-requirements__wrap-item
+			align-items: center
+			justify-content: center
+			flex-direction: column
+			.wrap
+				margin-bottom: 110px
+				&:last-of-type
+					margin-bottom: 0
+		.material-requirements__item
+			flex-direction: column
+			background-size: cover !important
+			padding-right: 5px
+			padding-bottom: 10px
+			&.bot
+				min-height: 185px
+			img
+				margin: auto
+				top: -79px
+				left: 0
+				right: 0
 // Medium devices (tablets, less than 992px)
 @media only screen and (max-width : 991px)
 	/**/
@@ -61,7 +89,11 @@
 			display: none
 		p
 			text-align: center
-
+	.get-more__title
+		h2.big2
+			@include fz(40)
+		h2.big
+			@include fz(40)
 // Small devices (landscape phones, less than 768px)
 @media only screen and (max-width : 767px)
 	
@@ -94,15 +126,23 @@
 		margin-top: 40px
 	[off-canvas*=left]
 		width: 255px
-	.react
-		h2
-			font-size: 20px
 	.file_wrap
 		input
 			width: 80%
 	.white-popup
 		textarea
 			min-height: 80px
+	body, html
+		font-size: 12px
+	.post-your-publication__carousel
+		.customPrevBtn
+			left: 0
+			img
+				transform: scale(0.7)
+		.customNextBtn
+			right: 0
+			img
+				transform: scaleX(-1) scale(0.7)
 // Extra small devices (portrait phones, less than 576px)
 @media only screen and (max-width : 575px)
 	/**/

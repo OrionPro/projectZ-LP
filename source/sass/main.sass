@@ -8,6 +8,7 @@
 @import "../libs/font-awesome.min.css"
 @import "../libs/anim-modal.css"
 @import "../libs/slidebars.min.css"
+@import "../libs/owl.carousel.min.css"
 
 html
 	&.modal
@@ -616,6 +617,127 @@ nav[canvas]
 		bottom: -27px
 		left: -150px
 		transform: rotate(-180deg) scaleX(-1) scale(1)
+// material-requirements
+.material-requirements
+	padding-top: 55px
+	padding-bottom: 55px
+	background: #fff url(../img/material-requirements__bg.png) center top no-repeat
+	.material-requirements__title
+		text-align: center
+		margin-bottom: 110px
+	.material-requirements__wrap-item
+		.wrap
+			&:nth-of-type(1)
+				margin-bottom: 110px
+			&:nth-of-type(1) .material-requirements__item
+				background: url(../img/material-requirements__img.jpg) center top no-repeat
+				img
+					top: -79px
+					left: 0
+			&:nth-of-type(2) .material-requirements__item
+				background: url(../img/material-requirements__img2.jpg) center top no-repeat
+				img
+					margin: auto
+					top: -79px
+					left: 0
+					right: 0
+			&:nth-of-type(3) .material-requirements__item
+				background: url(../img/material-requirements__img3.jpg) center top no-repeat
+				img
+					top: -79px
+					right: 0
+			&:nth-of-type(4) .material-requirements__item
+				background: url(../img/material-requirements__img4.jpg) center top no-repeat
+				img
+					top: -79px
+					left: 0
+			&:nth-of-type(5) .material-requirements__item
+				background: url(../img/material-requirements__img5.jpg) center top no-repeat
+				img
+					top: -79px
+					right: 0
+	.material-requirements__item
+		min-height: 185px
+		padding-left: 20px
+		padding-top: 20px
+		position: relative
+		&.bot
+			min-height: 130px
+		img
+			position: absolute
+	h2
+		color: #fff
+	h3
+		@include font($main_color, 22, $font_HelveticaNeueCyr_Heavy, 1.2)
+		margin-bottom: 5px
+	p
+		@include fz(18)
+		color: #fff
+		line-height: 1.2
+// Секция post-your-publication
+.post-your-publication
+	padding-top: 55px
+	padding-bottom: 55px
+	background: #fff
+.post-your-publication__title
+	text-align: center
+	margin-bottom: 60px
+.post-your-publication__carousel
+	position: relative
+	.item
+		text-align: center
+		p
+			position: absolute
+			margin: auto
+			top: calc(50% - 12.5px)
+			right: 0
+			left: 0
+			color: #ffffff
+	.customPrevBtn, .customNextBtn
+		width: 73px
+		height: 76px
+		position: absolute
+		top: calc(50% - 37px)
+		cursor: pointer
+		z-index: 100
+	.customPrevBtn
+		left: -50px
+	.customNextBtn
+		right: -50px
+		img
+			transform: scaleX(-1)
+// Секция get-more
+.get-more
+	padding-top: 55px
+	padding-bottom: 55px
+	background: #ffffff url(../img/get-more-bg.png) center bottom no-repeat
+.get-more__title
+	text-align: center
+	h2
+		&.big
+			@include font($main_color, 60, $font_HelveticaNeueCyr_Heavy, 1.1)
+		&.big2
+			@include font(#fff, 60, $font_HelveticaNeueCyr_Heavy, 1.1)
+			margin-bottom: 40px
+	p
+		@include fz(37)
+		line-height: 1.2
+		margin-bottom: 35px
+		&+p
+			@include fz(22)
+			margin-bottom: 290px
+			a
+					text-decoration: underline
+					color: $main_color
+					&:hover
+						text-decoration: none
+					&:active
+						text-decoration: none
+					&:focus
+						text-decoration: none
+	button
+		margin-bottom: 130px
+
 // Пример checkbox
 label.check, label.radio
 	display: inline-flex
