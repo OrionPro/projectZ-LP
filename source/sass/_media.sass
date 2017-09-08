@@ -94,6 +94,10 @@
 			@include fz(40)
 		h2.big
 			@include fz(40)
+	h1
+		@include font($main_txt_color, 30, $font_HelveticaNeueCyr_Roman, 1.2)
+		&:first-line
+			@include font($main_color, 50, $font_HelveticaNeueCyr_Heavy, 1.2)
 // Small devices (landscape phones, less than 768px)
 @media only screen and (max-width : 767px)
 	
@@ -170,7 +174,8 @@
 		.intermediate_title
 			h3
 				font-size: 20px
-
+	body, html
+		font-size: 11px
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
 	/**/
