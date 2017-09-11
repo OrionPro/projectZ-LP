@@ -1,14 +1,11 @@
 require("../libs/libs").jqueryui();
 require("../libs/libs").matchMedia();
-require("../libs/libs").waypoint();
-require("../libs/libs").Animate_css();
 require("../libs/libs").animate_modal_js();
 require("../libs/libs").magnific_popup();
 require("../libs/libs").tooltipster_follower();
 require("../libs/libs").tooltipster();
 require("../libs/libs").jqueryValidation();
 require("../libs/libs").input_mask();
-require("../libs/libs").sticky();
 import validation from '../js/validation';
 import modal from '../js/modal';
 

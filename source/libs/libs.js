@@ -41,20 +41,8 @@ exports.matchMedia = function () {
 	return require("../libs/matchMedia");
 };
 
-exports.waypoint = function () {
-	return require("../libs/waypoints.min");
-};
-
-exports.Animate_css = function () {
-	return require("../libs/Animate_css");
-};
-
 exports.animate_modal_js = function () {
 	return require("../libs/anim-modal");
-};
-
-exports.sticky = function () {
-	return require("../libs/jquery.sticky");
 };
 
 exports.owl_carousel = function () {
