@@ -6,10 +6,13 @@ class Animation {
 	constructor() {
 		this.tl1 = new TimelineMax();
 		this.logo = new TimelineMax();
+		this.logo = new TimelineMax();
+		this.tl2 = new TimelineMax();
 
 
 		this.tl1.pause();
 		this.logo.pause();
+		this.tl2.pause();
 	}
 
 	description() {
@@ -45,6 +48,22 @@ class Animation {
 				drawSVG: '50% 50%',
 				ease: Power4.easeOut
 			}, 1.2, '0.5');
+		this.tl2.from('.our-advantages .our-advantages__title h2', 0.5, {
+			y: -50,
+			opacity: 0,
+			ease: Power4.easeOut
+		}, 0.5, '+=0.5')
+			.from('.our-advantages .our-advantages__title p', 0.5, {
+				y: -50,
+				opacity: 0,
+				ease: Power4.easeOut
+			}, 0.6, '0.2')
+			.staggerFrom('.our-advantages .our-advantages__item', 0.8, {
+				y: -50,
+				opacity: 0,
+				ease: Power1.easeOut
+			}, 0.4, '-=0.2');
+
 	}
 
 	activeSection(section, startTop = 0, startBotton = 0) {
@@ -62,6 +81,10 @@ class Animation {
 		if (this.activeSection('header')) {
 			this.tl1.resume();
 			this.logo.resume();
+
+		}
+		if (this.activeSection('our-advantages', 500, 200)) {
+			this.tl2.resume();
 
 		}
 	}
